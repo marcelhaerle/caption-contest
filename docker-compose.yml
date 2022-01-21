@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    environment:
+      POSTGRES_USER: "caption_contest"
+      POSTGRES_PASSWORD: "v9qbsjdhbv821b3vjshdb"
+      POSTGRES_DB: "caption_contest"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+
+volumes:
+  postgresdata:
